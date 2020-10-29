@@ -1,0 +1,121 @@
+
+.button {
+  background-image: linear-gradient(to right bottom, #104381, #2586fc, #0d376b);
+  border: none;
+  border-radius: 2px;
+  color: #111;
+  outline: none !important;
+  padding: 1rem 4rem;
+  transition: all 0.5s;
+}
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+form .form-group-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+form .form-group-wrapper .form-group {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 2rem;
+  justify-content: center;
+  width: 100%;
+}
+form .form-group-wrapper .form-group .form-control {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  padding: 1rem;
+  width: 100%;
+}
+form .form-group-wrapper .form-group .form-label {
+  color: #ddd;
+  width: 100%;
+}
+form .form-group-wrapper .form-group .feedback-box {
+  margin-bottom: 1rem;
+}
+form .form-group-wrapper .form-group .feedback-box .feedback {
+  font-size: 2rem;
+  text-align: center;
+}
+form .form-group-wrapper .form-group .feedback-box .feedback.hidden {
+  display: none;
+}
+form .form-group-wrapper .form-group .feedback-box .feedback.positive {
+  color: #7fbf3f;
+}
+form .form-group-wrapper .form-group .feedback-box .feedback.negative {
+  color: #bf3f3f;
+}
+form .form-group-wrapper .form-group .feedback-box .feedback.negative.correct-answer {
+  display: block;
+}
+form .check-form {
+  font-size: 2rem;
+  margin: 2.5rem;
+}
+
+@media screen and (min-width: 576px) {
+  form .form-group-wrapper .form-group {
+    width: 45%;
+  }
+}
+@media screen and (min-width: 768px) {
+  form .form-group-wrapper .form-group {
+    width: 30%;
+  }
+}
+.app-headline {
+  border-bottom: 0.5rem solid #ddd;
+  padding-bottom: 2rem;
+}
+
+.ip-address {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.ip-address.fixed {
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.ip-address .ip-address-value {
+  font-size: 3.5rem;
+  letter-spacing: 0.25rem;
+  margin-bottom: 2.5rem;
+  width: 100%;
+}
+.ip-address .ip-address-button {
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+html {
+  font-size: 10px;
+}
+html body {
+  background-color: #222;
+  font-family: "Jockey One", sans-serif;
+}
+html body h1, html body h2, html body h3, html body h4, html body h5, html body h6 {
+  color: #ddd;
+  text-align: center;
+}
+html body h1 {
+  font-size: 2.5rem;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+}
+
+header {
+  background-color: #111;
+  border-bottom: 0.1rem solid #ddd;
+  margin-bottom: 2.5rem;
+  padding: 1rem;
+}

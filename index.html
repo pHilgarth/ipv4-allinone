@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="public/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Jockey+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <title>IPv4-Subnetting</title>
+  </head>
+  <body>
+    <div id="app">
+      <section class="app-container">
+        <h1 class="app-headline">IPv4-Adressierung und -Subnetting</h1>
+        <main class="container">
+          <article class="ip-address">
+            <h2 class="ip-address-value" v-if="randomAddress">{{ randomAddress }}</h2>
+            <button class="ip-address-button button" @click="getRandomAddress">
+              {{ labelIpAddressButton }}
+            </button>
+          </article>
+
+          <section class="questions" v-if="randomAddress">
+            <form>
+              <div class="form-group-wrapper">
+                <div class="form-group" v-for="field in formFields">
+                  <label for="field.name" class="form-label">{{ field.text }}</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    v-model="userInput[field.name]"
+                    id="field.name"
+                  />
+                  <div class="feedback-box" v-if="field.showFeedback">
+                    <span :class="field.feedbackClass">{{ field.feedbackText }}</span>
+                    <span :class="field.feedbackClass" class="correct-answer" v-if="field.showCorrect">{{ field.correctAnswer }}</span>
+                  </div>
+                </div>
+              </div>
+              <button class="check-form button" @click.prevent="checkAnswers">
+                Check
+              </button>
+            </form>
+          </section>
+        </main>
+      </section>
+    </div>
+  </body>
+  <script src="src/vue-source.js"></script>
+  <script type="text/javascript" src="src/main.js"></script>
+</html>
